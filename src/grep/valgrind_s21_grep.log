@@ -1,0 +1,369 @@
+==3650== Memcheck, a memory error detector
+==3650== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3650== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==3650== Command: ./s21_grep regex -e ^print s21_grep.c -l -o -f test_ptrn_grep.txt
+==3650== Parent PID: 2176
+==3650== 
+==3650== 
+==3650== FILE DESCRIPTORS: 4 open at exit.
+==3650== Open file descriptor 3: /pwd/grep/valgrind_s21_grep.log
+==3650==    <inherited from parent>
+==3650== 
+==3650== Open file descriptor 2: /dev/pts/0
+==3650==    <inherited from parent>
+==3650== 
+==3650== Open file descriptor 1: /pwd/grep/test_s21_grep.log
+==3650==    <inherited from parent>
+==3650== 
+==3650== Open file descriptor 0: /dev/pts/0
+==3650==    <inherited from parent>
+==3650== 
+==3650== 
+==3650== HEAP SUMMARY:
+==3650==     in use at exit: 474,320 bytes in 9,800 blocks
+==3650==   total heap usage: 12,010 allocs, 2,210 frees, 832,856 bytes allocated
+==3650== 
+==3650== 0 bytes in 245 blocks are indirectly lost in loss record 1 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49276D5: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 0 bytes in 245 blocks are indirectly lost in loss record 2 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49276D5: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 980 bytes in 245 blocks are indirectly lost in loss record 3 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4934E69: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 980 bytes in 245 blocks are indirectly lost in loss record 4 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49296D9: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49297C2: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 5 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929D2C: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 6 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929F19: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 7 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929D2C: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 8 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929F19: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 9 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929D2C: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 10 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929F19: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 11 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49276D5: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 12 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929D2C: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 13 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929A76: re_node_set_init_copy (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929F19: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 1,960 bytes in 245 blocks are indirectly lost in loss record 14 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49276D5: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 15 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929EF2: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 16 of 34
+==3650==    at 0x48386AF: malloc (vg_replace_malloc.c:308)
+==3650==    by 0x483ADE7: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x492777E: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 17 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929EF2: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 18 of 34
+==3650==    at 0x48386AF: malloc (vg_replace_malloc.c:308)
+==3650==    by 0x483ADE7: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x492777E: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 19 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929EF2: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 20 of 34
+==3650==    at 0x48386AF: malloc (vg_replace_malloc.c:308)
+==3650==    by 0x483ADE7: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x492777E: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 21 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x4929EF2: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 3,920 bytes in 245 blocks are indirectly lost in loss record 22 of 34
+==3650==    at 0x48386AF: malloc (vg_replace_malloc.c:308)
+==3650==    by 0x483ADE7: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x492777E: register_state (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929E83: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 7,840 bytes in 1,715 blocks are indirectly lost in loss record 23 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49296D9: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 13,720 bytes in 245 blocks are indirectly lost in loss record 24 of 34
+==3650==    at 0x483AD7B: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x49283EA: re_dfa_add_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49284C9: duplicate_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49286A3: duplicate_node_closure (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929896: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 21,560 bytes in 245 blocks are indirectly lost in loss record 25 of 34
+==3650==    at 0x483AB65: calloc (vg_replace_malloc.c:762)
+==3650==    by 0x4929D0E: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49353D3: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 21,560 bytes in 245 blocks are indirectly lost in loss record 26 of 34
+==3650==    at 0x483AB65: calloc (vg_replace_malloc.c:762)
+==3650==    by 0x4929D0E: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493552C: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 21,560 bytes in 245 blocks are indirectly lost in loss record 27 of 34
+==3650==    at 0x483AB65: calloc (vg_replace_malloc.c:762)
+==3650==    by 0x4929D0E: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4935543: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 21,560 bytes in 245 blocks are indirectly lost in loss record 28 of 34
+==3650==    at 0x483AB65: calloc (vg_replace_malloc.c:762)
+==3650==    by 0x4929D0E: re_acquire_state_context (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493555A: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 31,360 bytes in 245 blocks are indirectly lost in loss record 29 of 34
+==3650==    at 0x483AB65: calloc (vg_replace_malloc.c:762)
+==3650==    by 0x4934853: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 54,880 bytes in 245 blocks are indirectly lost in loss record 30 of 34
+==3650==    at 0x483AD7B: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x49283CE: re_dfa_add_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49284C9: duplicate_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49286A3: duplicate_node_closure (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929896: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 54,880 bytes in 245 blocks are indirectly lost in loss record 31 of 34
+==3650==    at 0x483AD7B: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x492840A: re_dfa_add_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49284C9: duplicate_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49286A3: duplicate_node_closure (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929896: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 54,880 bytes in 245 blocks are indirectly lost in loss record 32 of 34
+==3650==    at 0x483AD7B: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x4928419: re_dfa_add_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49284C9: duplicate_node (in /usr/lib/libc-2.30.so)
+==3650==    by 0x49286A3: duplicate_node_closure (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4929896: calc_eclosure_iter (in /usr/lib/libc-2.30.so)
+==3650==    by 0x4934E0E: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 62,720 bytes in 245 blocks are definitely lost in loss record 33 of 34
+==3650==    at 0x483877F: malloc (vg_replace_malloc.c:309)
+==3650==    by 0x49360CD: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== 411,600 (54,880 direct, 356,720 indirect) bytes in 245 blocks are definitely lost in loss record 34 of 34
+==3650==    at 0x48386AF: malloc (vg_replace_malloc.c:308)
+==3650==    by 0x483ADE7: realloc (vg_replace_malloc.c:836)
+==3650==    by 0x49355FC: re_compile_internal (in /usr/lib/libc-2.30.so)
+==3650==    by 0x493612D: regcomp (in /usr/lib/libc-2.30.so)
+==3650==    by 0x1094C7: options_implementation (in /pwd/grep/s21_grep)
+==3650==    by 0x109B8F: reading_file (in /pwd/grep/s21_grep)
+==3650==    by 0x1093BC: main (in /pwd/grep/s21_grep)
+==3650== 
+==3650== LEAK SUMMARY:
+==3650==    definitely lost: 117,600 bytes in 490 blocks
+==3650==    indirectly lost: 356,720 bytes in 9,310 blocks
+==3650==      possibly lost: 0 bytes in 0 blocks
+==3650==    still reachable: 0 bytes in 0 blocks
+==3650==         suppressed: 0 bytes in 0 blocks
+==3650== 
+==3650== For lists of detected and suppressed errors, rerun with: -s
+==3650== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
